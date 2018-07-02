@@ -10,7 +10,7 @@ import time
 import urllib.request
 import urllib.error
 from bs4 import BeautifulSoup
-import redis
+import pymongo
 from past.builtins import apply
 
 DATA_DIR = os.path.pardir + os.sep + 'Data' + os.sep
@@ -28,7 +28,10 @@ M_Headers = {
 
 }
 socket.setdefaulttimeout(10)
-DB = redis.Redis(host='47.94.251.202', port=6379, db=8, password='', decode_responses=True)
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["runoobdb"]
+# DB = redis.Redis(host='47.94.251.202', port=6379, db=8, password='', decode_responses=True)
 
 
 def get_index_sort(data):
@@ -140,14 +143,15 @@ if __name__ == '__main__':
     # url_1=base_url+'publication/258821296_An_Iterative_Pilot-Data_Aided_Estimator_for_OFDM-Based_Relay-Assisted_Systems'
     # data = request_url(WEAPON_URL, BASE_URL[-10:], key_cache='index')
     # get_index_sort(data)
-    Threadlist = []
-    keys = DB.keys('huanqiu:sec_sort*')
-    for first_sort in keys:
-        dic = DB.hgetall(first_sort)
-        for second_sort, link in dic.items():
-            # Threadlist.append(MyThread(request_url,link))
-            data = request_url(link)
-            get_sort_img(data, first_sort[len('huanqiu:sec_sort:'):], second_sort)
+
+    # Threadlist = []
+    # keys = DB.keys('huanqiu:sec_sort*')
+    # for first_sort in keys:
+    #     dic = DB.hgetall(first_sort)
+    #     for second_sort, link in dic.items():
+    #         # Threadlist.append(MyThread(request_url,link))
+    #         data = request_url(link)
+    #         get_sort_img(data, first_sort[len('huanqiu:sec_sort:'):], second_sort)
 
     # for t in Threadlist:
     #     t.setDaemon(True)  # 如果你在for循环里用，不行， 因为上一个多线程还没结束又开始下一个
