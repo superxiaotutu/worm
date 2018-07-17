@@ -127,7 +127,7 @@ if __name__ == '__main__':
     xls_file = '../../cfg/list.xlsx'
     wb = xlrd.open_workbook(xls_file)
     sheet = wb.sheet_by_index(0)
-    for irow in range(4999,sheet.nrows):
+    for irow in range(5212,sheet.nrows):
         print(irow)
         c_row = sheet.row(irow)
         # A = c_row[0].value
