@@ -80,7 +80,7 @@ def get_weapon_info(keyname,source):
     li = soup.find('li', class_="img")
     url = li.find('a').get('href')
     url = BASE_URL + url
-
+    
     # url = result['url']
     source = request_url(url)
     soup = BeautifulSoup(source, 'html.parser')

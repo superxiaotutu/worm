@@ -1,0 +1,4 @@
+X-47无人实验机项目是美国国防高等研究计划署（英语：Defense Advanced Research Projects Agency，缩写：DARPA）的联合无人战斗机系统计划（英语：Joint Unmanned Combat Air Systems ，缩写：J-UCAS）中诺斯洛普·格鲁门公司的投标机型项目，绰号“飞马”（Pegasus）。
+该项目主要分为三个部分，X-47A部分，是诺格最早的投标方案，主要用户面向美国空军；2006年4月，J-UCAS计划终止，转而由美国空军和美国海军独立计划。诺格的X-47无人机项目被美国海军选中成为无人控制自主监视攻击程序（英语：Unmanned Carrier-Launched Surveillance and Strike ，缩写：UCLASS） 验证机，诺格面向美国海军的X-47无人机项目就是X-47B无人攻击机，这是第二个部分；第3个部分就是X-47C，是X-47B的放大型，拥有更大的机体和4500公斤的有效载荷量，以执行战略打击/轰炸任务。
+首架X-47A，于2003年2月23日首飞；接下来的海军版本X-47B，于2011年1月首飞。
+
